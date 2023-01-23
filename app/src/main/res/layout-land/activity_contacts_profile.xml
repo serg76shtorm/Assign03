@@ -8,10 +8,11 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_height_dp"
+        android:layout_width="@dimen/layout_height_dp"
+        android:layout_height="match_parent"
         android:background="@color/c_background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -48,7 +49,7 @@
         android:textSize="@dimen/font_big"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -57,7 +58,7 @@
         android:layout_height="@dimen/picture_user"
         android:layout_marginTop="@dimen/global_middle_long"
         android:src="@drawable/ic_user"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="ContentDescription" />
@@ -68,7 +69,7 @@
         android:layout_height="@dimen/picture_user"
         android:layout_marginTop="@dimen/global_middle_long"
         android:src="@drawable/ic_image_in_circle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="ContentDescription" />
@@ -81,7 +82,7 @@
         android:text="@string/contactsname"
         android:textColor="@color/f_white_static"
         android:textSize="@dimen/font_middle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -93,7 +94,7 @@
         android:text="@string/proger"
         android:textColor="@color/f_gray_static"
         android:textSize="@dimen/font_standart"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -106,7 +107,7 @@
         android:text="@string/address"
         android:textColor="@color/f_gray_static"
         android:textSize="@dimen/font_standart"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -114,7 +115,7 @@
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.helper.widget.Flow
@@ -124,8 +125,8 @@
         app:constraint_referenced_ids="imageView3, imageView4, imageView5"
         app:flow_horizontalGap="@dimen/font_very_big"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline3" />
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -158,11 +159,11 @@
         android:textSize="@dimen/font_standart"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/guideline3" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/layout_height_dp"
         android:layout_height="@dimen/btn_height_1"
         android:layout_marginStart="@dimen/global_middle"
         android:layout_marginEnd="@dimen/global_middle"
@@ -172,12 +173,14 @@
         android:textColor="@color/f_black_light"
         android:textSize="@dimen/font_standart"
         app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:strokeColor="@color/f_black_light"
         app:strokeWidth="@dimen/global_frame" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/layout_height_dp"
         android:layout_height="@dimen/btn_height_2"
         android:layout_marginStart="@dimen/global_middle"
         android:layout_marginEnd="@dimen/global_middle"
@@ -186,6 +189,8 @@
         android:text="@string/view_my_contacts"
         android:textColor="@color/f_white_static"
         android:textSize="@dimen/font_standart_plus"
+        app:layout_constraintStart_toEndOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
