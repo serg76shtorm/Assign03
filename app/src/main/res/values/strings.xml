@@ -10,7 +10,7 @@
     <string name="contactsname">Serhii Serhiichyk</string>
     <string name="address">Address</string>
     <string name="addressUser">галактика Млечный Путь, Солнецная система,\n планета Земля</string>
-    <string name="message">Message</string>
+    <string name="edit_profile">Edit profile</string>
     <string name="view_my_contacts">VIEW My contacts</string>
     <string name="add_to_my_contacts">Add to my contacts</string>
     <string name="users">Users</string>
@@ -27,5 +27,8 @@
     <string name="unworthy1">Недостоин</string>
     <string name="unworthy2">Недостойна</string>
     <string name="unworthy3">Недостойны</string>
+<!-- // английский, украинский - TODO: задание 4
+-->
     <string name="avatar">Avatar</string>
+    <string name="go_to_settings_and_fill_out_the_profile">Go to settings and fill out the profile</string>
 </resources>
