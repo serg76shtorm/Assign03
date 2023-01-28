@@ -18,8 +18,8 @@
         <LinearLayout
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/btn_height_3"
+            android:layout_marginTop="@dimen/global_mini"
             android:gravity="center_vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,8 +56,8 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/btn_height_3"
+            android:layout_marginTop="@dimen/global_mini"
             android:gravity="center_vertical"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,12 +99,12 @@
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <com.sserhiichyk.assign02.views.CustomButton
+        <com.sserhiichyk.assign03.views.CustomButton
             android:id="@+id/customButton"
             android:layout_width="0dp"
-            android:layout_height="@dimen/btn_height_1"
+            android:layout_height="@dimen/btn_height_3"
             android:layout_marginEnd="@dimen/global_middle"
-            android:layout_marginBottom="@dimen/global_middle"
+            android:layout_marginBottom="@dimen/global_mini"
             android:background="@drawable/krugliye_ugli"
             android:text="@string/create_user"
             android:textColor="@color/f_red_error"

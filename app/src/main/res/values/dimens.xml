@@ -7,6 +7,7 @@
     <dimen name="global_middle_long">24dp</dimen>
     <dimen name="btn_height_1">40dp</dimen>
     <dimen name="btn_height_2">55dp</dimen>
+    <dimen name="btn_height_3">30dp</dimen>
     <dimen name="img_avatar">80dp</dimen>
     <dimen name="picture_user">113dp</dimen>
     <dimen name="layout_height_dp">0dp</dimen>

@@ -8,20 +8,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_height_dp"
+        android:layout_width="@dimen/layout_height_dp"
+        android:layout_height="match_parent"
         android:background="@color/c_background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/recycler_checkbox"
-            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            android:layout_marginTop="@dimen/global_middle"
+            android:layout_marginStart="@dimen/global_middle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back"
             tools:ignore="ContentDescription" />
 
@@ -29,22 +31,21 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/font_mini"
+            android:layout_marginTop="@dimen/global_middle"
             android:text="@string/create_user"
             android:textColor="@color/f_white"
             android:textSize="@dimen/font_big"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="@dimen/picture_user"
             android:layout_height="@dimen/picture_user"
-            android:layout_marginTop="@dimen/font_mini"
+            android:layout_marginTop="@dimen/global_middle"
             android:foreground="@drawable/ic_image_in_circle"
             android:src="@drawable/ic_user"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
@@ -54,10 +55,10 @@
             android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/global_middle_long"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toTopOf="@+id/imageView9"
+            android:layout_marginTop="@dimen/global_middle"
+            android:layout_marginEnd="@dimen/global_middle"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_addfoto"
             tools:ignore="ContentDescription" />
 
@@ -67,17 +68,17 @@
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
     <ScrollView
         android:id="@+id/scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/layout_height_dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline4">
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearlayout"
@@ -169,6 +170,7 @@
                 android:textColor="@color/f_white_static"
                 android:textSize="@dimen/font_standart_plus" />
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
