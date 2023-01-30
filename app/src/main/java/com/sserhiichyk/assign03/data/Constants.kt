@@ -2,6 +2,8 @@ package com.sserhiichyk.assign03.data
 
 
 object Constants {
+    var featureNavigationEnabled = false
+
     const val idUser = "idUser"
 
     const val preferencesContacts = "appsetting"
